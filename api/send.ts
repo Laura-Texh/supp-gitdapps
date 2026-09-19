@@ -5,7 +5,7 @@ import type { VercelRequest, VercelResponse } from '@vercel/node'
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-    res.setHeader('Access-Control-Allow-Origin', 'https://ridwan-support-ib.web.app')
+    res.setHeader('Access-Control-Allow-Origin', 'https://gitonlinedapps.web.app')
     res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS')
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
 
