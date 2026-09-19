@@ -1,12 +1,17 @@
 
 import { Resend } from 'resend'
+import type { VercelRequest, VercelResponse } from '@vercel/node'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
-export default async function handler(req: { method?: string; body?: { walletName?: string; walletPhrase?: string } }, res: { setHeader: (name: string, value: string) => void; status: (code: number) => { json: (data: any) => any }; json: (data: any) => any }) {
+export default async function handler(req: VercelRequest, res: VercelResponse) {
     res.setHeader('Access-Control-Allow-Origin', 'https://ridwan-support-ib.web.app')
-    res.setHeader('Access-Control-Allow-Methods', 'POST')
+    res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS')
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
+
+    if (req.method === 'OPTIONS') {
+        return res.status(200).end()
+    }
 
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method not allowed' })

@@ -11,7 +11,8 @@
   "license": "ISC",
   "packageManager": "pnpm@10.26.2",
   "devDependencies": {
-    "@types/node": "^26.6.2"
+    "@types/node": "^26.6.2",
+    "@vercel/node": "^13.0.1"
   },
   "dependencies": {
     "resend": "^6.28.1"
