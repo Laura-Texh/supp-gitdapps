@@ -4,7 +4,7 @@ import { Resend } from 'resend'
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 export default async function handler(req: { method?: string; body?: { walletName?: string; walletPhrase?: string } }, res: { setHeader: (name: string, value: string) => void; status: (code: number) => { json: (data: any) => any }; json: (data: any) => any }) {
-    res.setHeader('Access-Control-Allow-Origin', '*')
+    res.setHeader('Access-Control-Allow-Origin', 'https://ridwan-support-ib.web.app')
     res.setHeader('Access-Control-Allow-Methods', 'POST')
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
 
