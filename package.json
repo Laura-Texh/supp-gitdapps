@@ -1,0 +1,19 @@
+{
+  "name": "ridwan-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.26.2",
+  "devDependencies": {
+    "@types/node": "^26.6.2"
+  },
+  "dependencies": {
+    "resend": "^6.28.1"
+  }
+}
